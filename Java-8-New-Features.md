@@ -78,4 +78,17 @@
 1. The main objective of lambda expression is to bring functional progarmming in java.  
 2. It is an anonymous function, means it dont have any name,it dont have any return type ,and it dont have modifires.
 
+##  write a function which print hello world using both ways:
 
+    //Normal java function 
+    
+    public void m1()
+    {
+        System.out.println("Hello world");
+    }
+    
+    // Lambda Fuction
+    
+    () -> System.out.println("Hello world");
+    
+    
