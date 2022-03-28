@@ -19,7 +19,7 @@
         {
        
                 System.out.println("The squre of 4 is"+squreIt(4));
-                System.out.println("The squre of 8 is"+squreIt(8    ));
+                System.out.println("The squre of 8 is"+squreIt(8));
        
         }
     }
@@ -32,12 +32,27 @@
         
         public static void mian(String args[])
         {
-                Function<Integer,Integer>f=i->i*i;
+                Predicate<Integer,Integer>f=i->i*i;
                 System.out.println("The squre of 4 is"+f.applay(40));
                 System.out.println("The squre of 8 is"+f.applay(30));
        
         }
-    }    
+    }   
+    
+## Calculate even number using java 8 features:
+
+      import java.util.function.*;
+        class Test
+        {
+
+            public static void mian(String args[])
+            {
+                    Function<Integer>p=i->i%2==0;
+                    System.out.println("The squre of 4 is"+p.test(4));
+                    System.out.println("The squre of 8 is"+p.test(3));
+
+            }
+        }     
 
 * Lambda Expression
 * Functional Interface
