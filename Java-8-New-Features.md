@@ -24,7 +24,7 @@
         }
     }
 
-## Calculate sqrt using java 8 features:
+## Calculate sqr using java 8 features:
 
     import java.util.function.*;
     class Test
@@ -87,7 +87,7 @@
         System.out.println("Hello world");
     }
     
-    // Lambda Fuction
+    // Lambda Function
     
     () -> System.out.println("Hello world");
     
@@ -99,8 +99,25 @@
     {
          System.out.println(a+b);
     }
-    
-     // Lambda Fuction
+     // Lambda Function
      // some time compiler uess the varibale type automatically we are not required to write explicitly.
      
     (a,b)->System.out.println(a+b);
+    
+## Write a function which calculate squr:
+
+    //Normal java function 
+    
+    public int squareIt(int a)
+    {
+    
+        return a*a;
+    }
+
+    // Lambda Function
+    
+    1. (int a) -> {return a*a;}
+    2. (int a) -> a*a;
+    3. (a) -> a*a;
+    4. a -> a*a;
+    
