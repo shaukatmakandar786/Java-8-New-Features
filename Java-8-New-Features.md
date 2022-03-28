@@ -92,3 +92,15 @@
     () -> System.out.println("Hello world");
     
     
+## Write a function which take 2 arguments and print sum:
+
+    //Normal java function 
+    public void sum(int a,int b)
+    {
+         System.out.println(a+b);
+    }
+    
+     // Lambda Fuction
+     // some time compiler uess the varibale type automatically we are not required to write explicitly.
+     
+    (a,b)->System.out.println(a+b);
