@@ -24,6 +24,20 @@
         }
     }
 
+## Calculate sqrt using java 8 features:
+
+    import java.util.function.*;
+    class Test
+    {
+        
+        public static void mian(String args[])
+        {
+                Function<Integer,Integer>f=i->i*i;
+                System.out.println("The squre of 4 is"+f.applay(40));
+                System.out.println("The squre of 8 is"+f.applay(30));
+       
+        }
+    }    
 
 * Lambda Expression
 * Functional Interface
