@@ -115,7 +115,7 @@
     }
 
     // Lambda Function
-    
+    // return ststmt should be write in curly brases {}.
     1. (int a) -> {return a*a;}
     2. (int a) -> a*a;
     3. (a) -> a*a;
