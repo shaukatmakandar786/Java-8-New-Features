@@ -6,6 +6,25 @@
 
 3. There are several feature of java 8 but the biggest advantage is we can write concise code we are not required to write big big code.  
 
+## Calculate sqrt using normal java programming:
+
+    class Test
+    {
+        public static int squreIt(int n)
+        {
+                return n*n
+        }
+    
+        public static void mian(String args[])
+        {
+       
+                System.out.println("The squre of 4 is"+squreIt(4));
+                System.out.println("The squre of 8 is"+squreIt(8    ));
+       
+        }
+    }
+
+
 * Lambda Expression
 * Functional Interface
 * Default method and Static method
