@@ -72,3 +72,10 @@
 * Optional class
 * Nashron Javascript Engin
 * etc
+
+#  Lambda Expression:
+
+1. The main objective of lambda expression is to bring functional progarmming in java.  
+2. It is an anonymous function, means it dont have any name,it dont have any return type ,and it dont have modifires.
+
+
