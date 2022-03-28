@@ -122,3 +122,13 @@
     4. a -> a*a;
     
 ## Note: Now we learn how to write Lambda Expression, But if we want to call Lambda expression we should go for Functional Interface.
+
+# Functional Interface:
+
+An interface which contains only One Abstract Method is called functional interface like.  
+
+1. Runnable=>   run()
+2. Comparable=> compareTo()
+3. Comparator=> compare()
+4. ActionListener=> actionPerformed()
+5. Callable=> call()
