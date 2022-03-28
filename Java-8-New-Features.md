@@ -121,3 +121,4 @@
     3. (a) -> a*a;
     4. a -> a*a;
     
+## Note: Now we learn how to write Lambda Expression, But if we want to call Lambda expression we should go for Functional Interface.
