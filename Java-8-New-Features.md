@@ -121,6 +121,24 @@
     3. (a) -> a*a;
     4. a -> a*a;
     
+    
+    // Tell which is valid and which is in valid
+    
+    n-> return n*n;     => Invalid
+    n->{return n*n;};   => Valid
+    n->{return n*n};    => Invalid
+    n->{n*n;};          => Invalid
+    n->n*n;             => Valid
+    
+    
+### Note: 
+
+1. Without curly braces we cannot use return keyword. Compiler will conceder return value automatically.
+2. Within curly braces if we want to return some values compulsory we should use return statement.
+
+
+
+    
 ## Note: Now we learn how to write Lambda Expression, But if we want to call Lambda expression we should go for Functional Interface.
 
 # Functional Interface:
@@ -132,3 +150,5 @@ An interface which contains only One Abstract Method is called functional interf
 3. Comparator=> compare()
 4. ActionListener=> actionPerformed()
 5. Callable=> call()
+
+
