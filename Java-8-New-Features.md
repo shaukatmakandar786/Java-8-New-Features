@@ -32,7 +32,7 @@
         
         public static void mian(String args[])
         {
-                Predicate<Integer,Integer>f=i->i*i;
+                Function<Integer,Integer>f=i->i*i;
                 System.out.println("The squre of 4 is"+f.applay(40));
                 System.out.println("The squre of 8 is"+f.applay(30));
        
@@ -47,7 +47,7 @@
 
             public static void mian(String args[])
             {
-                    Function<Integer>p=i->i%2==0;
+                    Predicate<Integer>p=i->i%2==0;
                     System.out.println("The squre of 4 is"+p.test(4));
                     System.out.println("The squre of 8 is"+p.test(3));
 
