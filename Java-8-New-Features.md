@@ -158,7 +158,9 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
 @FunctionalInterface annotation is used to make functional interface, But it is not compulsory.
 
 ### Labmda Functoin with Functional Interface:
-
+        
+            //Example 1
+            
             package com.shaukat;
 
             @FunctionalInterface
@@ -193,3 +195,29 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                 }
             }
             // Hello world.........        
+            
+            
+            
+            //Example 2
+           
+            package com.shaukat;
+
+            @FunctionalInterface
+            interface inter {
+                public void m1(int a, int b);
+
+            }
+
+            public class Main {
+
+                public static void main(String[] args) {
+                    inter i1 = (a, b) -> System.out.println("The sum :" + (a + b));
+                    i1.m1(10, 20);
+                    i1.m1(100,200);
+                    i1.m1(1000,2000);
+
+                }
+            }
+            //The sum :30
+            //The sum :300
+            //The sum :3000
