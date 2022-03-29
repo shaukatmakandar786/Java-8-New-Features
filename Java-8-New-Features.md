@@ -154,3 +154,7 @@ An interface which contains only One Abstract Method is called functional interf
 Q) In java 8 we can use default method and static method in interface,so can we use it in functional interface also ?  
 
 ans: Restriction is aplicable only for abstract method,but not for default method and static method you can take any numbers of default method and static method in functional interface .
+
+@FunctionalInterface annotation is used to make functional interface, But it is not compulsory.
+
+### Labmda Functoin with Functional Interface:
