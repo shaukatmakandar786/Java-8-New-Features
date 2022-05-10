@@ -163,3 +163,40 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                 13
                 16
                 [4, 8, 10, 12, 16]
+## Anonymous Inner class Vs Lambda Expression:
+// anonymous inner class is different from Lambda Expression
+
+                public class Main {
+                    public static void main(String[] args) {
+
+                        Runnable r=new Runnable() {
+
+                            @Override
+                            public void run() {
+                                for(int i=0;i<10;i++)
+                                {
+                                    System.out.println("Child");
+                                }
+                            }
+                        };
+                        Thread t1=new Thread(r);
+                        t1.start();
+                        for(int i=0;i<10;i++)
+                        {
+                            System.out.println("Main");
+                        }
+
+                       /* Runnable r=()->{
+                            for(int i=0;i<10;i++)
+                            {
+                                System.out.println("Child");
+                            }
+                        };
+                        Thread t1=new Thread(r);
+                        t1.start();
+                        for(int i=0;i<10;i++)
+                        {
+                            System.out.println("Main");
+                        }*/
+                    }
+                }
