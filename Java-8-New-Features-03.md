@@ -97,6 +97,7 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                     public static void main(String[] args) {
                 //        MyThread m=new MyThread();
                 //        Thread t1=new Thread(m);
+                //        t1.start();
 
                         Runnable r=()->{
                             for(int i=0;i<10;i++)
