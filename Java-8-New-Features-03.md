@@ -78,3 +78,37 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
             //The sum :30
             //The sum :300
             //The sum :3000
+            
+## Runnable Example with lambda expression:
+
+                import java.util.*;
+
+                /*class MyThread implements Runnable
+                {
+                    @Override
+                    public void run() {
+                        for(int i=0;i<10;i++)
+                        {
+                            System.out.println("Child"+i);
+                        }
+                    }
+                }*/
+                public class Main {
+                    public static void main(String[] args) {
+                //        MyThread m=new MyThread();
+                //        Thread t1=new Thread(m);
+
+                        Runnable r=()->{
+                            for(int i=0;i<10;i++)
+                            {
+                                System.out.println("Child"+i);
+                            }
+                        };
+                        Thread t1=new Thread(r);
+                        t1.start();
+                        for(int i=0;i<10;i++)
+                        {
+                            System.out.println("Main"+i);
+                        }
+                    }
+                }        
