@@ -113,3 +113,36 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                         }
                     }
                 }        
+
+## Comparator Example with lambda expression:
+
+                import java.util.ArrayList;
+                import java.util.Collections;
+                import java.util.Comparator;
+
+                //class MyComparator implements Comparator<Integer>
+                //{
+                //    @Override
+                //    public int compare(Integer i1, Integer i2) {
+                //        return (i1<i2)?-1:(i1>i2)?1:0;
+                //    }
+                //}
+                public class Main {
+                    public static void main(String[] args) {
+
+                        ArrayList<Integer> l=new ArrayList<>();
+
+                        l.add(10);
+                        l.add(4);
+                        l.add(12);
+                        l.add(16);
+                        l.add(8);
+                        System.out.println(l);
+                //        Collections.sort(l,new MyComparator());
+                //        System.out.println(l);
+
+                        Comparator<Integer> c=(i1,i2)->(i1<i2)?-1:(i1>i2)?1:0;
+                        Collections.sort(l,c);
+                        System.out.println(l);
+                    }
+                }
