@@ -144,5 +144,22 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                         Comparator<Integer> c=(i1,i2)->(i1<i2)?-1:(i1>i2)?1:0;
                         Collections.sort(l,c);
                         System.out.println(l);
+                        
+                        l.stream().forEach(System.out::println);
+                        List<Integer> l1=l.stream().filter(i ->i%2==0 ).collect(Collectors.toList());
+                        System.out.println(l1);
                     }
                 }
+                
+<!--                 
+                [10, 4, 12, 16, 8, 7, 3, 13]
+                [3, 4, 7, 8, 10, 12, 13, 16]
+                3
+                4
+                7
+                8
+                10
+                12
+                13
+                16
+                [4, 8, 10, 12, 16] -->
