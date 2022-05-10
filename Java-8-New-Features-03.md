@@ -164,7 +164,12 @@ ans: Restriction is aplicable only for abstract method,but not for default metho
                 16
                 [4, 8, 10, 12, 16]
 ## Anonymous Inner class Vs Lambda Expression:
-// anonymous inner class is different from Lambda Expression
+* Anonymous inner class can extend a normal class.
+* Anonymous inner class can extend a an abstract class.
+* Anonymous inner class can implement an interface which contains any number of abstract methods
+
+* Lambda expression can implement an interface which contains only one abstract method
+* anonymous inner class is different from Lambda Expression
 
                 public class Main {
                     public static void main(String[] args) {
