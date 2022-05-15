@@ -19,3 +19,36 @@ Means no enhancement related to the varaible in any version
 
 # default method | virtual extension method | Defender method :
 
+Without effecting implementation classes if we want to add new method to the interface then we should go for default method.
+
+Example:
+
+        interface I1
+        {
+            void m1();
+            void m2();
+
+        }
+        class Test1 implements It
+        {
+            void m1(){}
+            void m2(){}
+        }
+        class Test2 implements It
+        {
+            void m1(){}
+            void m2(){}
+        }
+        .
+        .
+        .
+        .
+        class Test100 implements It
+        {
+            void m1(){}
+            void m2(){}
+        }
+        
+If we want to add one more method in I1 interface, So it may effect to all implementation classes.Means we need to override that new method in all implemetation classes.if we have 100 implementation classes so we need to implement that new method in all implementation classes.        
+        
+        
