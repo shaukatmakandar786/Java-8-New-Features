@@ -80,3 +80,24 @@ If we want to add one more method in I1 interface, So it may effect to all imple
                             t1.m1();
                         }
                     }        
+
+
+                    interface I1
+                    {
+                        public static void m1()
+                        {
+                            System.out.println("Interface static method");
+                        }
+                    }
+                    public class Main{
+
+                        public static void main(String[] args) {
+
+                            I1.m1();
+
+                    //        m1();                 invalid
+                    //        Test.m1();            invalid
+                    //        Test t=new Test();
+                    //        t.m1();               invalid
+                        }
+                    }
