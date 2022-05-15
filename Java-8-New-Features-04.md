@@ -97,7 +97,17 @@ If we want to add one more method in I1 interface, So it may effect to all imple
 
         //        m1();                 invalid
         //        Test.m1();            invalid
-        //        Test t=new Test();
+        //        Main t=new Main();
         //        t.m1();               invalid
+            }
+        }
+        
+We can also create main method in interface in 1.8 version 
+
+        interface Main
+        {
+            public static void main(String args[])
+            {
+                System.out.println("Interface static method");
             }
         }
