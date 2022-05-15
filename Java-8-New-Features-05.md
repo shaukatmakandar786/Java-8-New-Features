@@ -25,3 +25,5 @@
                 System.out.println(collect);
             }
         }
+
+        [0,6,8]
