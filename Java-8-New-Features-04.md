@@ -51,4 +51,32 @@ Example:
         
 If we want to add one more method in I1 interface, So it may effect to all implementation classes.Means we need to override that new method in all implemetation classes.if we have 100 implementation classes so we need to implement that new method in all implementation classes.        
         
-        
+                    interface I1
+                    {
+                        default void m1()
+                        {
+                            System.out.println("Default method m1 of I1");
+                        }
+                    }
+                    interface I2
+                    {
+                        default void m1()
+                        {
+                            System.out.println("Default method m1 of I2");
+                        }
+                    }
+                    public class Main implements I1,I2{
+
+                        public void m1()
+                        {
+                            System.out.println("Default Overriden method");
+                            I1.super.m1();
+                            I2.super.m1();
+                        }
+
+                        public static void main(String[] args) {
+
+                            Main t1=new Main();
+                            t1.m1();
+                        }
+                    }        
