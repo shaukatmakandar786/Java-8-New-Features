@@ -29,6 +29,29 @@
                 System.out.println(collect1);
             }
         }
-
+        
         [0,6,8]
         [5, 8, 11, 13, 12]
+     
+-----------------------------------------------------------------------------------------------------------------------------------------     
+        
+                import java.util.ArrayList;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        ArrayList<Integer> l1=new ArrayList<Integer>();
+
+                        l1.add(15);
+                        l1.add(45);
+                        l1.add(68);
+                        l1.add(79);
+                        l1.add(34);
+
+                        long count = l1.stream().filter(i -> i < 35).count();
+                        System.out.println(count);
+
+                    }
+                }     
+                
+                2
