@@ -6,6 +6,21 @@
 2. If want to process objects from the Collection then we can use stream concepts of java 8.
 3. Stream s=c.stream();
 4. java.util.stream pkg
+5. functions:
+
+* stream()
+* filter()
+* map()
+* collect()
+* count()
+* sorted()
+* sorted(Comparator)
+* sorted(Comparable)
+* min()
+* max()
+* forEach()
+* toArray()
+* Streamof()
 
         import java.util.ArrayList;
         import java.util.List;
