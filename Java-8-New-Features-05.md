@@ -55,3 +55,39 @@
                 }     
                 
                 2
+                
+ ---------------------------------------------------------------------------------------------------------------------------------------------
+ 
+                import java.util.ArrayList;
+                import java.util.List;
+                import java.util.stream.Collectors;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        ArrayList<Integer> l1=new ArrayList<Integer>();
+
+                        l1.add(15);
+                        l1.add(45);
+                        l1.add(68);
+                        l1.add(79);
+                        l1.add(34);
+
+                        // sorted method sort objects in asc order by default
+                        List<Integer> collect = l1.stream().sorted().collect(Collectors.toList());
+                        System.out.println(collect);
+
+                        //if we want to sort in desc order then we should go for Comparator
+                        List<Integer> collect1 = l1.stream().sorted((i1, i2) -> ((i1 < i2) ? 1 : (i1 > i2) ? -1 : 0)).collect(Collectors.toList());
+                        System.out.println(collect1);
+
+                        //using Comparable
+                        List<Integer> collect2 = l1.stream().sorted((i1, i2) -> i1.compareTo(i2)).collect(Collectors.toList());
+                        System.out.println(collect2);
+
+                        //using Comparable desc
+                        List<Integer> collect3 = l1.stream().sorted((i1, i2) -> i2.compareTo(i1)).collect(Collectors.toList());
+                        System.out.println(collect3);
+
+                    }
+                }
