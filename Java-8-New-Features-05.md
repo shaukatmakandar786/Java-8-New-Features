@@ -148,3 +148,35 @@
                 [zakir, shaukat, asif, Azim, AAAAAAAAAAAA]
                 [AAAAAAAAAAAA, shaukat, zakir, Azim, asif]
                 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+                import java.util.ArrayList;
+                import java.util.Comparator;
+                import java.util.List;
+                import java.util.stream.Collectors;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        ArrayList<Integer> l1=new ArrayList<Integer>();
+
+                       l1.add(15);
+                       l1.add(0);
+                       l1.add(10);
+                       l1.add(30);
+                       l1.add(5);
+                       System.out.println(l1);
+
+                        Integer integer = l1.stream().min((i1, i2) -> i1.compareTo(i2)).get();
+                        System.out.println(integer);
+
+                        Integer integer1 = l1.stream().max((i1, i2) -> i1.compareTo(i2)).get();
+                        System.out.println(integer1);
+
+                        Integer integer2 = l1.stream().min((i1, i2) -> -i1.compareTo(i2)).get();
+                        System.out.println(integer2);
+
+                        Integer integer3 = l1.stream().max((i1, i2) -> -i1.compareTo(i2)).get();
+                        System.out.println(integer3);
+                    }
+                }
