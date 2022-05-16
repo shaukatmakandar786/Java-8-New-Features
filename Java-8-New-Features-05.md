@@ -223,3 +223,22 @@
                 10
                 30
                 5
+------------------------------------------------------------------------------------------------------------------------------
+
+                import java.util.stream.Stream;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        Stream<Integer> integerStream = Stream.of(1, 22, 333, 4444, 55555);
+
+                        integerStream.forEach(System.out::println);
+                    }
+                }
+                
+                
+                1
+                22
+                333
+                4444
+                55555                
