@@ -97,3 +97,54 @@
                 [15, 34, 45, 68, 79]
                 [79, 68, 45, 34, 15]
                 
+------------------------------------------------------------------------------------------------------------------------------
+
+                import java.util.ArrayList;
+                import java.util.Comparator;
+                import java.util.List;
+                import java.util.stream.Collectors;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        ArrayList<String> l1=new ArrayList<String>();
+
+                        l1.add("shaukat");
+                        l1.add("Azim");
+                        l1.add("AAAAAAAAAAAA");
+                        l1.add("zakir");
+                        l1.add("asif");
+                        System.out.println(l1);
+
+                        List<String> collect = l1.stream().sorted().collect(Collectors.toList());
+                        System.out.println(collect);
+
+                        List<String> collect1 = l1.stream().sorted((i1,i2)->i1.compareTo(i2)).collect(Collectors.toList());
+                        System.out.println(collect1);
+
+                        List<String> collect2 = l1.stream().sorted((i1,i2)->i2.compareTo(i1)).collect(Collectors.toList());
+                        System.out.println(collect2);
+
+                        Comparator<String> c=(s1,s2)->{
+                            int len1=s1.length();
+                            int len2=s2.length();
+                            if(len1<len2)
+                                return 1;
+                            else if (len1>len2) {
+                                return -1;
+                            }
+                            else
+                                return 0;
+                        };
+                        List<String> collect3 = l1.stream().sorted(c).collect(Collectors.toList());
+                        System.out.println(collect3);
+
+                    }
+                }
+                
+                [shaukat, Azim, AAAAAAAAAAAA, zakir, asif]
+                [AAAAAAAAAAAA, Azim, asif, shaukat, zakir]
+                [AAAAAAAAAAAA, Azim, asif, shaukat, zakir]
+                [zakir, shaukat, asif, Azim, AAAAAAAAAAAA]
+                [AAAAAAAAAAAA, shaukat, zakir, Azim, asif]
+                
