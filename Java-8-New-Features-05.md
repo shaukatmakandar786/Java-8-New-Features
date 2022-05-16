@@ -180,3 +180,32 @@
                         System.out.println(integer3);
                     }
                 }
+                
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+                import java.util.ArrayList;
+
+                public class Main{
+                    public static void main(String[] args) {
+
+                        ArrayList<Integer> l1=new ArrayList<Integer>();
+
+                       l1.add(15);
+                       l1.add(0);
+                       l1.add(10);
+                       l1.add(30);
+                       l1.add(5);
+                       System.out.println(l1);
+
+                       l1.stream().forEach(l2->{
+                           System.out.println(l2);
+                       });
+                        System.out.println();
+                        System.out.println();
+                        Integer[] integers = l1.stream().toArray(Integer[]::new);
+                        for(Integer p: integers)
+                        {
+                            System.out.println(p);
+                        }
+                    }
+                }
