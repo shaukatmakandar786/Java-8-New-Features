@@ -48,9 +48,24 @@ public class Part2 {
         List<Employee> employeeList= Arrays.asList(
                 new Employee(101,"shaukat",50000d,"M"),
                 new Employee(102,"Wasim",40000d,"M"),
-                new Employee(103,"Azim",30000d,"F"),
+                new Employee(103,"Azim",50000d,"F"),
                 new Employee(104,"Sajjad",100000d,"F")
         );
+
+        employeeList.stream().map(Employee::getSalary)
+                .distinct()
+                .filter(salary-> salary>40000d)
+                        .forEach(System.out::println);
+
+        List<Integer> list1 = Arrays.asList(10, 20, 40, 30, 67, 34);
+        List<Integer> list2 = Arrays.asList(154, 22, 40, 30, 65, 34);
+        List<Integer> list3 = Arrays.asList(14, 20, 40, 30, 60, 14);
+
+        List<List<Integer>> map=Arrays.asList(list1,list2,list3);
+        List<Integer> collect = map.stream().flatMap(list -> list.stream()).distinct().collect(Collectors.toList());
+
+        System.out.println(collect);
+
 
 //        Comparator<Employee> comparator=new Comparator<Employee>() {
 //            @Override
