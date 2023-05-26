@@ -1,4 +1,4 @@
-# Java-8-New-Feture
+# Java-8-New-Fetur
 
 https://www.youtube.com/watch?v=5ZHFPi0OcD0&list=PL5Y4hrqdSfftW0CuiKWbALAxLFbE9movj&index=4
 
