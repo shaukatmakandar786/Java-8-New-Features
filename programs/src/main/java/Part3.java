@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -65,5 +66,7 @@ public class Part3 {
         System.out.println(employee1List.stream().map(e->e.getCity()).collect(Collectors.toList()));
 
         System.out.println(employee1List.stream().flatMap(e->e.getCity().stream()).collect(Collectors.toList()));
+
+        System.out.println(employee1List.stream().flatMap(e->e.getCity().stream()).sorted((i1,i2)-> Integer.valueOf(i2.length()).compareTo(Integer.valueOf(i1.length()))).collect(Collectors.toList()));
     }
 }
