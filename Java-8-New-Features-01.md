@@ -33,8 +33,8 @@
         public static void mian(String args[])
         {
                 Function<Integer,Integer>f=i->i*i;
-                System.out.println("The squre of 4 is"+f.applay(40));
-                System.out.println("The squre of 8 is"+f.applay(30));
+                System.out.println("The squre of 4 is"+f.apply(40));
+                System.out.println("The squre of 8 is"+f.apply(30));
        
         }
     }   
