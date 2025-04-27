@@ -63,8 +63,6 @@
         import java.util.Random;
         class Main {
             public static void main(String[] args) {
-                System.out.println("Try programiz.pro");
-                
                 Function<Integer, Integer> f=i-> i*i;
                 
                 System.out.println("The Square of 5 is : "+f.apply(5));
@@ -98,6 +96,12 @@
                 
             }
         }        
+
+        output:
+        The Square of 5 is : 25
+        length is greater than 5
+        Good Morning,shaukat
+        Your OTP is : 064572
 
 * Lambda Expression
 * Functional Interface
