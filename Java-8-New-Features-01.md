@@ -41,18 +41,21 @@
     
 ## Calculate even number using java 8 features:
 
-      import java.util.function.*;
-        class Test
-        {
-
-            public static void mian(String args[])
-            {
-                    Predicate<Integer>p=i->i%2==0;
-                    System.out.println("The squre of 4 is"+p.test(4));
-                    System.out.println("The squre of 8 is"+p.test(3));
-
+    import java.util.function.*;
+    import java.util.Random;
+    class Main {
+        public static void main(String[] args) {
+            System.out.println("Try programiz.pro");
+            
+            Predicate<Integer>p=i->i%2==0;
+            if(p.test(3)){
+                 System.out.println("Given Number is Even");
             }
-        }     
+            else{
+                 System.out.println("Given Number is Odd");
+            }
+        }
+    }
 
 ## Inbuilt Functional Interface Example:
 
