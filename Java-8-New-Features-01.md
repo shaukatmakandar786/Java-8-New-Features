@@ -54,6 +54,48 @@
             }
         }     
 
+## Inbuilt Functional Interface Example:
+
+        import java.util.function.*;
+        import java.util.Random;
+        class Main {
+            public static void main(String[] args) {
+                System.out.println("Try programiz.pro");
+                
+                Function<Integer, Integer> f=i-> i*i;
+                
+                System.out.println("The Square of 5 is : "+f.apply(5));
+                
+                Predicate<String> p=i-> i.length()>5;
+                
+                if(p.test("Helloo")){
+                    System.out.println("length is greater than 5");
+                }
+                else{
+                    System.out.println("length is not greater than 5");
+                }
+                
+                
+                Consumer<String> c= i-> System.out.println("Good Morning,"+i);
+                
+                c.accept("shaukat");
+                
+                Supplier<String> s=()->{
+                    
+                    Random random=new Random();
+                    StringBuilder sb=new StringBuilder();
+                    for(int i=1; i<=6; i++){
+                        
+                        sb.append(random.nextInt(10));
+                    }
+                    return sb.toString();
+                };
+                
+                System.out.println("Your OTP is : "+s.get());
+                
+            }
+        }        
+
 * Lambda Expression
 * Functional Interface
 * Default method and Static method
