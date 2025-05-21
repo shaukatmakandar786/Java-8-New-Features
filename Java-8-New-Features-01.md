@@ -57,7 +57,7 @@
         }
     }
 
-## Inbuilt Functional Interface Example:
+## Inbuilt Functional Interface Example1:
 
         import java.util.function.*;
         import java.util.Random;
@@ -102,6 +102,43 @@
         length is greater than 5
         Good Morning,shaukat
         Your OTP is : 064572
+
+## Inbuilt Functional Interface Example2:
+        import java.util.function.*;
+        class Main {
+            public static void main(String[] args) {
+                System.out.println("Try programiz.pro");
+                
+                Function<Integer, Integer> f= i->i*i;
+                
+                System.out.println("Square of given number is "+f.apply(2));
+                
+                Predicate<Integer> p=i-> i%2==0;
+                
+                if(p.test(4)){
+                    System.out.println("given no is even");
+                }
+                else{
+                    System.out.println("given number is odd");
+                }
+                
+                Consumer<String> c=name-> System.out.println("Hello, "+name);
+                
+                c.accept("shaukat");
+                
+                Supplier s=()-> Math.random();
+                
+                System.out.println(s.get());
+            }
+        }
+
+        output:
+
+        Try programiz.pro
+        Square of given number is 4
+        given no is even
+        Hello, shaukat
+        0.4800616978170984
 
 * Lambda Expression
 * Functional Interface
