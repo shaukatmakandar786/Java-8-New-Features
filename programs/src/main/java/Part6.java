@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Part6 {
 
@@ -26,9 +25,17 @@ public class Part6 {
                 .entrySet().stream().filter(i -> i.getValue() == 1).map(Map.Entry::getKey).collect(Collectors.toList());
 
         System.out.println(collect2);
+
+        List<String> stringList = Arrays.asList("Honda", "TVS", "hero", "jupiter", "Bajaj", "TVS");
+
+        List<String> collect3 = stringList.stream().filter(i -> Character.isUpperCase(i.charAt(0))).sorted((i1, i2) -> Integer.valueOf(i2.length()).compareTo(Integer.valueOf(i1.length()))).collect(Collectors.toList());
+        System.out.println(collect3);
     }
 }
 /*
 [I, am, a, boy, I, am, a, girl]
 {a=2, I=2, girl=1, am=2, boy=1}
-[girl, boy]*/
+[girl, boy]
+[Honda, Bajaj, TVS, TVS]
+
+*/
